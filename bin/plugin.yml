@@ -1,0 +1,28 @@
+name: AdminMode
+main: nl.kaspermuller.adminmode.AdminMode
+version: 0.1
+commands:
+  adminmode:
+    description: Simple plugin that provides a neat admin mode primarily for survival servers.
+    usage: /<command>
+    aliases: am
+    permission: adminmode.use
+    permission-message: I'm sorry Dave. I'm afraid I can't let you do that.
+  enderchest:
+    description: See someones enderchest.
+    usage: /<command>
+    aliases: ec
+    permission: adminmode.enderchest
+    permission-message: I'm sorry Dave. I'm afraid I can't let you do that.
+permissions:
+  adminmode.*:
+    description: Gives access to all adminmode commands.
+    children:
+       adminmode.use: true
+       adminmode.enderchest: true
+  adminmode.use:
+    description: Gives access to /adminmode.
+    default: op
+  adminmode.enderchest:
+    description: Gives access to /enderchest.
+    default: op
